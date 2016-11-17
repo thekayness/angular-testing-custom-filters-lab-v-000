@@ -7,4 +7,9 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+	it('should remove all the vowels', function() {
+		var results = $filter('removeAllVowels')('caterpillar');
+		expect(results).toEqual('ctrpllr');
+	});
+
 });
